@@ -1,0 +1,140 @@
+html {
+  height: 100%;
+}
+
+body {
+  align-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  display: flex;
+}
+
+body, .example h1, .example p, .example .button {
+  transition: all .2s ease-in-out;
+}
+
+body.light-theme {
+  background-color: #151515;
+}
+
+body.light-theme .example h1, body.light-theme .example p {
+  color: #fff;
+}
+
+body.light-theme .buttons .button {
+  color: #fff;
+  border-color: #fff;
+}
+
+body.light-theme .buttons .button:hover {
+  color: #151515;
+  background-color: #fff;
+}
+
+.example {
+  box-sizing: border-box;
+  width: 1000px;
+  height: 378px;
+  margin: auto;
+  padding: 20px;
+  font-family: Roboto, sans-serif;
+}
+
+.example .flipdown {
+  margin: auto;
+}
+
+.example h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.example p {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-weight: 100;
+}
+
+.example .buttons {
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin: 50px auto 0;
+  display: flex;
+}
+
+.example .buttons p {
+  color: #333;
+  height: 50px;
+  margin: 0;
+  padding: 0 25px 0 0;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.example .button {
+  box-sizing: border-box;
+  color: #333;
+  text-transform: uppercase;
+  border: 2px solid #333;
+  border-radius: 4px;
+  height: 50px;
+  padding: 0 20px;
+  font-weight: 700;
+  line-height: 46px;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+}
+
+.example .button:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.example .button i {
+  margin-right: 5px;
+}
+
+@media (width <= 550px) {
+  .example {
+    width: 100%;
+    height: 362px;
+  }
+
+  .example h1 {
+    font-size: 2.5em;
+  }
+
+  .example p {
+    margin-bottom: 25px;
+  }
+
+  .example .buttons {
+    text-align: center;
+    width: 100%;
+    margin-top: 25px;
+    display: block;
+  }
+
+  .example .buttons p, .example .buttons a {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .example .buttons p {
+    padding-right: 0;
+  }
+
+  .example .buttons a {
+    display: inline-block;
+  }
+}
+
+/*# sourceMappingURL=index.4d663569.css.map */
