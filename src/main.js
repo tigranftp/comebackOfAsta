@@ -3,6 +3,14 @@ let namesOfAsta = [
     "Астанда", "Аста", "Наумова", "Наумян", "Анна Асти", "Абхазка", "Аԥсуа", "Гудаутка", "Асточка", "Астушка"
 ]
 
+let colorOfAstaName = [
+    "orange", "magenta", "black", "red", "green", "blue", "maroon"
+]
+
+let emojiOfAstaName = [
+    "❤️", "😍", "🔥", "⭐️", "🥶"
+]
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Unix timestamp (in seconds) to count down to
@@ -20,11 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     const nameOfAsta = document.getElementById("nameOfAsta");
-    nameOfAsta.textContent = namesOfAsta[Math.floor(Math.random() * namesOfAsta.length)]
+
+    let emoji = emojiOfAstaName[Math.floor(Math.random() * emojiOfAstaName.length)]
+    let name = namesOfAsta[Math.floor(Math.random() * namesOfAsta.length)]
+    let color = colorOfAstaName[Math.floor(Math.random() * colorOfAstaName.length)]
+
+
+    nameOfAsta.style.color = color
+    nameOfAsta.textContent = emoji +  name + emoji
 });
-
-
-
 
 
 

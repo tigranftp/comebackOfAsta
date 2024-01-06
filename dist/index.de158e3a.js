@@ -10,6 +10,22 @@ let namesOfAsta = [
     "\u0410\u0441\u0442\u043E\u0447\u043A\u0430",
     "\u0410\u0441\u0442\u0443\u0448\u043A\u0430"
 ];
+let colorOfAstaName = [
+    "orange",
+    "magenta",
+    "black",
+    "red",
+    "green",
+    "blue",
+    "maroon"
+];
+let emojiOfAstaName = [
+    "\u2764\uFE0F",
+    "\uD83D\uDE0D",
+    "\uD83D\uDD25",
+    "\u2B50\uFE0F",
+    "\uD83E\uDD76"
+];
 document.addEventListener("DOMContentLoaded", ()=>{
     // Unix timestamp (in seconds) to count down to
     let date = new Date("2024-02-02T03:27:00+0000");
@@ -21,7 +37,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
         console.log("The countdown has ended!");
     });
     const nameOfAsta = document.getElementById("nameOfAsta");
-    nameOfAsta.textContent = namesOfAsta[Math.floor(Math.random() * namesOfAsta.length)];
+    let emoji = emojiOfAstaName[Math.floor(Math.random() * emojiOfAstaName.length)];
+    let name = namesOfAsta[Math.floor(Math.random() * namesOfAsta.length)];
+    let color = colorOfAstaName[Math.floor(Math.random() * colorOfAstaName.length)];
+    nameOfAsta.style.color = color;
+    nameOfAsta.textContent = emoji + name + emoji;
 });
 /**
  * @name FlipDown
