@@ -1,12 +1,27 @@
+let namesOfAsta = [
+    "\u0410\u0441\u0442\u0430\u043D\u0434\u0430",
+    "\u0410\u0441\u0442\u0430",
+    "\u041D\u0430\u0443\u043C\u043E\u0432\u0430",
+    "\u041D\u0430\u0443\u043C\u044F\u043D",
+    "\u0410\u043D\u043D\u0430 \u0410\u0441\u0442\u0438",
+    "\u0410\u0431\u0445\u0430\u0437\u043A\u0430",
+    "\u0410\u0525\u0441\u0443\u0430",
+    "\u0413\u0443\u0434\u0430\u0443\u0442\u043A\u0430",
+    "\u0410\u0441\u0442\u043E\u0447\u043A\u0430",
+    "\u0410\u0441\u0442\u0443\u0448\u043A\u0430"
+];
 document.addEventListener("DOMContentLoaded", ()=>{
     // Unix timestamp (in seconds) to count down to
-    var dayOfComeback = new Date("2024-02-02T03:27:00+0000").getTime() / 1000;
+    let date = new Date("2024-02-02T03:27:00+0000");
+    let timeToComeback = date.getTime() / 1000;
     // Set up FlipDown
-    new FlipDown(dayOfComeback)// Start the countdown
+    new FlipDown(timeToComeback)// Start the countdown
     .start()// Do something when the countdown ends
     .ifEnded(()=>{
         console.log("The countdown has ended!");
     });
+    const nameOfAsta = document.getElementById("nameOfAsta");
+    nameOfAsta.textContent = namesOfAsta[Math.floor(Math.random() * namesOfAsta.length)];
 });
 /**
  * @name FlipDown

@@ -1,9 +1,15 @@
+
+let namesOfAsta = [
+    "Астанда", "Аста", "Наумова", "Наумян", "Анна Асти", "Абхазка", "Аԥсуа", "Гудаутка", "Асточка", "Астушка"
+]
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Unix timestamp (in seconds) to count down to
-    var dayOfComeback = (new Date("2024-02-02T03:27:00+0000").getTime() / 1000);
+    let date = new Date("2024-02-02T03:27:00+0000");
+    let timeToComeback = date.getTime() / 1000
     // Set up FlipDown
-   new FlipDown(dayOfComeback)
+   new FlipDown(timeToComeback)
 
         // Start the countdown
         .start()
@@ -13,7 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('The countdown has ended!');
         });
 
+    const nameOfAsta = document.getElementById("nameOfAsta");
+    nameOfAsta.textContent = namesOfAsta[Math.floor(Math.random() * namesOfAsta.length)]
 });
+
+
+
+
 
 
 /**
