@@ -14,7 +14,7 @@ let emojiOfAstaName = [
 document.addEventListener('DOMContentLoaded', () => {
 
     // Unix timestamp (in seconds) to count down to
-    let date = new Date("2024-08-20T03:27:00+0000");
+    let date = new Date("2025-03-01T03:27:00+0000");
     let timeToComeback = date.getTime() / 1000
     // Set up FlipDown
    new FlipDown(timeToComeback)
